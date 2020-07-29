@@ -1,14 +1,14 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-const Magic = require('express-routemagic');
-
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
-
-var app = express();
+// @ts-ignore
+import createError = require('http-errors');
+import express = require('express');
+import { path } from 'path';
+// @ts-ignore
+import cookieParser = require('cookie-parser');
+// @ts-ignore
+import logger = require('morgan');
+// @ts-ignore
+import Magic = require('express-routemagic');
+const app: express.Application = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,10 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
 Magic.use(app, { invokerPath: __dirname }); //need 'invokerPath'
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -31,7 +28,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
