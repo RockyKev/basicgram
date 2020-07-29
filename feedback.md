@@ -25,3 +25,11 @@ src/app.ts:4:10 - error TS2616: 'path' can only be imported by using 'import pat
 ```
 
 ## Part 2
+
+### 3. Start Building
+
+**Continue to add more tabs by duplicating homepage.vue. We name the files camera.vue and profile.vue:
+VueJS file structure**
+**Import them into home.vue:**
+
+The codeblock labels are inaccurate. All three tabs say `label: 'Home',`
