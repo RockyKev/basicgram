@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // @ts-ignore
 const createError = require("http-errors");
 const express = require("express");
-const path_1 = require("path");
+const path = require("path");
 // @ts-ignore
 const cookieParser = require("cookie-parser");
 // @ts-ignore
@@ -12,13 +12,13 @@ const logger = require("morgan");
 const Magic = require("express-routemagic");
 const app = express();
 // view engine setup
-app.set('views', path_1.path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path_1.path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 Magic.use(app, { invokerPath: __dirname }); //need 'invokerPath'
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

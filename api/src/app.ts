@@ -1,7 +1,8 @@
 // @ts-ignore
 import createError = require('http-errors');
 import express = require('express');
-import { path } from 'path';
+
+import path = require("path")
 // @ts-ignore
 import cookieParser = require('cookie-parser');
 // @ts-ignore
