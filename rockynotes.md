@@ -1,0 +1,30 @@
+
+1. `npm run tsc` runs the typescript parser. 
+
+2. 
+
+`npm cpy-cli` 
+
+```
+    "postbuild": "cpy --cwd=src '**/*' '!**/*.ts' './../dist' --parents", 
+    
+    // --cwd=src means the Current Working Directory is set to "./src"
+    // '**/*' means all files and folder in the cwd.
+    // '!**/*.ts' means excluding all typescript files.
+    // './../dist' means "basicgram/api/dist", and is relative to "src" folder
+    // --parents will retain the folder structure in "src"
+
+```
+
+3. auto-recompiling is done with nodemon
+
+it restarts the server on file changes.
+
+```
+    "dev": "nodemon --ext js,ts,json --watch src --exec 'ts-node' ./src/bin/www",
+
+    --exec: We use --exec flag because nodemon will not use ts-node, instead will use node if the entry file is not ".ts". In this case www is not.
+    --ext: When --exec is used, we also need to use --ext to manually specify the files to watch for changes.
+    --watch: This defines which folder nodemon will watch for changes to do a restart.
+    (Credits to this video) https://www.youtube.com/watch?v=zRo2tvQpus8
+```
