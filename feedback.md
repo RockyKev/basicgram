@@ -7,7 +7,7 @@ Maybe a comment about how you can pull that branch to check your work.
 
 ### Folder Structure 
 ** screenshot **
-
+cd 
 Am I supposed to make a 'view' folder?
 
 ### 3. Code conversion and type declarations
@@ -24,3 +24,4 @@ I actually got an error!
 src/app.ts:4:10 - error TS2616: 'path' can only be imported by using 'import path = require("path")' or a default import.
 ```
 
+## Part 2

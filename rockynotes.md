@@ -1,5 +1,14 @@
 
-1. `npm run tsc` runs the typescript parser. 
+1. To build things: 
+In `api`: 
+
+* `npm start` runs the typescript parser. 
+* `npm run dev` sets up the watcher
+* `npm run build` compiles tsc
+
+In `view`: 
+
+* `npm run dev` 
 
 2. 
 
@@ -28,3 +37,11 @@ it restarts the server on file changes.
     --watch: This defines which folder nodemon will watch for changes to do a restart.
     (Credits to this video) https://www.youtube.com/watch?v=zRo2tvQpus8
 ```
+
+4. Component library onsenui 
+https://onsen.io/vue/
+
+portable to different frontneds like react, angular. It's a core package, Then you install a bindings pacakge for the specific framework.
+
+By default, OnsenUI uses IOS/Android icons. It's a mobile app centric library. 
+Change to fontawesome instead for webapp. 
