@@ -6,6 +6,8 @@ In `api`:
 * `npm run dev` sets up the watcher
 * `npm run build` compiles tsc
 
+http://localhost:3000/
+
 In `view`: 
 
 * `npm run dev` 
@@ -45,3 +47,11 @@ portable to different frontneds like react, angular. It's a core package, Then y
 
 By default, OnsenUI uses IOS/Android icons. It's a mobile app centric library. 
 Change to fontawesome instead for webapp. 
+
+
+4. Adding runtime checking
+
+In part 3: 
+1. Setting up runtime checking for your API
+The first thing you want to do is to set up runtime checking for your API, because TypeScript does not do that. Also you may also need to produce comprehensible error messages for your requestors. A library that will serve this specific need is you-are-not:
+npm install you-are-not --save

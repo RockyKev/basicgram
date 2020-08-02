@@ -4,24 +4,25 @@
   "private": true,
   "scripts": {
     "start": "node ./dist/bin/www",
-    "dev": "nodemon --ext js,ts,json --watch src --exec 'ts-node' ./src/bin/www",
+    "dev": "nodemon --ext js,ts,json --watch src --exec ts-node ./src/bin/www",
     "build": "npm run tsc",
     "prebuild": "del './dist'",
     "postbuild": "cpy --cwd=src '**/*' '!**/*.ts' './../dist' --parents",
     "tsc": "tsc"
   },
   "dependencies": {
-    "@types/express": "^4.17.7",
-    "@types/node": "^14.0.27",
     "cookie-parser": "~1.4.5",
     "debug": "~4.1.1",
     "express": "~5.0.0-alpha.8",
     "express-routemagic": "^2.0.2",
     "hbs": "~4.1.1",
     "http-errors": "~1.7.3",
-    "morgan": "~1.10.0"
+    "morgan": "~1.10.0",
+    "you-are-not": "^0.7.5"
   },
   "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.27",
     "cpy-cli": "^3.1.1",
     "del-cli": "^3.0.1",
     "nodemon": "^2.0.4",
