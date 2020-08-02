@@ -36,6 +36,30 @@ I actually got an error!
 src/app.ts:4:10 - error TS2616: 'path' can only be imported by using 'import path = require("path")' or a default import.
 ```
 
+### Linux -> Win
+
+```
+"dev": "nodemon --ext js,ts,json --watch src --exec 'ts-node' ./src/bin/www",
+```
+Was using Ubuntu 18.04 when I started. Everything worked fine.
+
+Switched to my Win10 computer. Had to re-write this.
+```
+"dev": "nodemon --ext js,ts,json --watch src --exec ts-node ./src/bin/www",
+```
+https://stackoverflow.com/questions/44764004/ts-node-is-not-recognized-as-an-internal-or-external-command-operable-program
+
+Just wanted to share. Not your job to deal with us Window weirdos. :-) 
+
+
+### Routing
+https://i.imgur.com/MZKH1Pz.png
+
+https://i.imgur.com/whbjCKU.png
+When I GET from localhost:3000/users/, I get 404s from a Win10. 
+But on my linux, I have no issues. 
+
+
 ## Part 2
 
 ### 3. Start Building
