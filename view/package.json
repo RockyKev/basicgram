@@ -33,7 +33,7 @@
   "dependencies": {
     "autoprefixer": "^9.8.0",
     "onsenui": "^2.10.10",
-    "postcss": "^7.0.32",
+    "postcss": "^8.2.10",
     "postcss-loader": "^3.0.0",
     "tailwindcss": "^1.4.6",
     "vue": "^2.6.11",
